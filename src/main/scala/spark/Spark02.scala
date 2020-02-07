@@ -8,7 +8,7 @@ object Spark02 {
     val data =  Array(12,13,56,45)
     val r1= spark.sparkContext.parallelize(data,2)
     val rtrans= r1.map(x=>x*10)
-    rtrans.collect()
+    rtrans.collect().mkString("")
 
 
   }
